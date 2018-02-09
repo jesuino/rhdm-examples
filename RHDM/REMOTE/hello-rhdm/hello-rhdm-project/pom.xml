@@ -7,6 +7,10 @@
   <version>1.0.0</version>
   <name>hello-rhdm</name>
   <description>Hello World project for RHDM</description>
+  <properties>
+    <!-- This needs to be updated for RHDM 7 GA -->
+    <kie.api.version>7.5.0.Final-redhat-3</kie.api.version>
+  </properties>
   <repositories>
     <repository>
       <id>guvnor-m2-repo</id>
@@ -14,4 +18,18 @@
       <url>http://localhost:8080/decision-central/maven2/</url>
     </repository>
   </repositories>
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.kie.server</groupId>
+            <artifactId>kie-server-maven-plugin</artifactId>
+            <version>${kie.api.version}</version>
+            <configuration>
+                <username>kieserver</username>
+                <password>kieserver1!</password>
+            </configuration>
+        </plugin>
+        
+    </plugins>
+</build>
 </project>
