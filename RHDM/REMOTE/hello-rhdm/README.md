@@ -5,7 +5,7 @@ This is the simples hello world example for Red Hat Decision Manager.
 What you will find here is:
 
 * [RHDM Simplest Project](https://github.com/jesuino/rhdm-examples/tree/master/RHDM/REMOTE/hello-rhdm/hello-rhdm-project): The simples project containing a single rule
-* [RM Clients](https://github.com/jesuino/rhdm-examples/tree/master/RHDM/REMOTE/hello-rhdm/hello-rhdm-client): JMS and REST client for RHDM execution server
+* [RHDM Clients](https://github.com/jesuino/rhdm-examples/tree/master/RHDM/REMOTE/hello-rhdm/hello-rhdm-client): JMS and REST client for RHDM execution server
 
 
 ### Running
