@@ -1,0 +1,8 @@
+package com.myteam.hello_rhdm;
+
+rule "Say Hello"
+when
+    $name: String()
+then
+    System.out.println("Hello " + $name + "!");
+end
