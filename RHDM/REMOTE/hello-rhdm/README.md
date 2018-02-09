@@ -15,5 +15,5 @@ Considering you are running RHDM locally on your machine you can follow the step
 * cd into `hello-rhdm-project` and run `mvn clean install kieserver:deploy`
 * Build the client by going to `hello-rhdm-client` and run `mvn clean package`, then chose the client you want to run:
   * To run the REST client: `mvn exec:java -Dexec.mainClass="org.example.RESTClient"`
-  * To run the REST client: `mvn exec:java -Dexec.mainClass="org.example.JMSClient"`
+  * To run the JMS client: `mvn exec:java -Dexec.mainClass="org.example.JMSClient"`
 * Whatever client you run you you should see the message `Hello John!` in logs.
