@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<semantic:definitions xmlns:semantic="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns="http://www.trisotech.com/definitions/_b2ef74f8-3453-44f7-887a-86ea1dd43d80" xmlns:feel="http://www.omg.org/spec/FEEL/20140401" xmlns:tc="http://www.omg.org/spec/DMN/20160719/testcase" xmlns:triso="http://www.trisotech.com/2015/triso/modeling" xmlns:trisofeed="http://trisotech.com/feed" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" exporter="DMN Modeler" exporterVersion="6.0.2" id="_b2ef74f8-3453-44f7-887a-86ea1dd43d80" name="Vacation Day Count - Solution 1" namespace="http://www.trisotech.com/definitions/_b2ef74f8-3453-44f7-887a-86ea1dd43d80" triso:logoChoice="Default">
+  <semantic:description>&lt;p&gt;&lt;span style="color: #000000; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-style: normal; font-weight: normal; word-spacing: 0px; float: none; display: inline !important; white-space: normal; orphans: 2; widows: 2; background-color: #ffffff; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px;"&gt;The Decision Management Community (DMCommunity.org) provides resources for DM practitioners, listing tools, news, providing examples and also giving monthly challenge. As a vendor that always seek improvement, Trisotech took January challenge using Trisotech DMN Modeler (Trisotech.com)&lt;/span&gt;&lt;/p&gt;</semantic:description>
+  <semantic:extensionElements>
+    <triso:ProjectCharter>
+      <triso:projectScope>&lt;p style="color: #000000; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-style: normal; font-weight: normal; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px;"&gt;The January challenge is to create the best possible decision tables to represent the following statements, provided by Prof. Jan Vanthienen who is one of the best known experts in decision tables and a member of the DMN Task Force.&lt;/p&gt;
+&lt;p style="color: #000000; text-transform: none; text-indent: 0px; letter-spacing: normal; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-style: normal; font-weight: normal; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px;"&gt;&lt;img src="https://dmcommunity.files.wordpress.com/2016/01/vacationdaysproblem.jpg?w=640" alt="VacationDaysProblem" /&gt;&lt;/p&gt;</triso:projectScope>
+      <triso:projectGoals/>
+      <triso:projectChallenges/>
+      <triso:projectStakeholders/>
+    </triso:ProjectCharter>
+  </semantic:extensionElements>
+  <semantic:decision displayName="Five extra days Rule" id="_852f6be7-e235-4ff4-9dee-505f8cf2ae22" name="Five extra days Rule">
+    <semantic:description>&lt;p&gt;Only employees younger than 18 or at least 60 years, or employees with at least 30 years of service will receive 5 extra days.&lt;/p&gt;</semantic:description>
+    <semantic:variable id="_0197fb6f-83d5-4f42-9220-5c14754ef845" name="Five extra days Rule" typeRef="feel:number"/>
+    <semantic:informationRequirement>
+      <semantic:requiredInput href="#_14640e17-48e3-4902-8262-a63f7c3805e1"/>
+    </semantic:informationRequirement>
+    <semantic:informationRequirement>
+      <semantic:requiredInput href="#_cf96cd90-c5c9-43f0-a286-18db091a4443"/>
+    </semantic:informationRequirement>
+    <semantic:decisionTable hitPolicy="ANY" id="_b87189ab-0a03-47c4-a870-262772af5c5a" outputLabel="Five extra days Rule">
+      <semantic:input id="_880c3024-d2b4-494d-a886-88b61e540fb1">
+        <semantic:inputExpression typeRef="feel:number">
+          <semantic:text>Age</semantic:text>
+        </semantic:inputExpression>
+        <semantic:inputValues triso:constraintsType="simple">
+          <semantic:text>&gt;=14</semantic:text>
+        </semantic:inputValues>
+      </semantic:input>
+      <semantic:input id="_73729518-eae0-44e6-a5f9-12ca43b08a4d">
+        <semantic:inputExpression typeRef="feel:number">
+          <semantic:text>Years of Service</semantic:text>
+        </semantic:inputExpression>
+        <semantic:inputValues triso:constraintsType="simple">
+          <semantic:text>&gt;=0</semantic:text>
+        </semantic:inputValues>
+      </semantic:input>
+      <semantic:output id="_01f437f7-ea2c-4e93-bcce-959367f7dbba"/>
+      <semantic:rule id="_af5af20a-adda-4181-83d3-9430226d6d9a">
+        <semantic:inputEntry id="_aa456e24-b1f2-4058-abee-d4be9b58ec04">
+          <semantic:text>&lt;18</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_98284313-0a7f-47ba-b825-b6a12938d3fb">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="_06c7bcb0-4fa3-4e00-8814-ec0e2e1eee06">
+          <semantic:text>5</semantic:text>
+        </semantic:outputEntry>
+      </semantic:rule>
+      <semantic:rule id="_8b41aa0e-d327-48dd-ad68-00877973f7b1">
+        <semantic:inputEntry id="_41bdce33-92fe-4f0b-93f3-869391328732">
+          <semantic:text>&gt;=60</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_b4f07906-edc2-40bd-8e02-39031faf39be">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="_cc99b3e4-0c43-4cbd-ab45-5ebddec1a448">
+          <semantic:text>5</semantic:text>
+        </semantic:outputEntry>
+      </semantic:rule>
+      <semantic:rule id="_8eedc92b-201b-4f10-942d-abecc43dfe2e">
+        <semantic:inputEntry id="_0275d8cf-c040-476a-96d3-0eeb43488404">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_f006c644-5a53-4344-b929-fa77e303c7a6">
+          <semantic:text>&gt;=30</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="_24baf673-bb3f-4c6c-91a4-4139aa7c7b23">
+          <semantic:text>5</semantic:text>
+        </semantic:outputEntry>
+      </semantic:rule>
+      <semantic:rule id="_40104aa3-c853-4743-8dac-a264bb779862">
+        <semantic:inputEntry id="_471ebb3e-657d-423c-9f74-832f15e15611">
+          <semantic:text>[18..60)</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_50335805-adc5-4da2-a7cf-a267c12f91b2">
+          <semantic:text>&lt;30</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="_4ca23d2c-615f-44e3-abdd-c8cef196a546">
+          <semantic:text>0</semantic:text>
+        </semantic:outputEntry>
+      </semantic:rule>
+    </semantic:decisionTable>
+  </semantic:decision>
+  <semantic:decision displayName="Three extra days Rule" id="_62995f21-c34f-4a9e-a25a-46fdcaf34a7e" name="Three extra days Rule">
+    <semantic:description>&lt;p&gt;Employees with at least 30 years of service and also employees of age 60 or more, receive 3 extra days, on top of possible additional days already given.&lt;/p&gt;</semantic:description>
+    <semantic:variable id="_c5564316-88c0-40dc-9624-e3e6ba742fc5" name="Three extra days Rule" typeRef="feel:number"/>
+    <semantic:informationRequirement>
+      <semantic:requiredInput href="#_cf96cd90-c5c9-43f0-a286-18db091a4443"/>
+    </semantic:informationRequirement>
+    <semantic:informationRequirement>
+      <semantic:requiredInput href="#_14640e17-48e3-4902-8262-a63f7c3805e1"/>
+    </semantic:informationRequirement>
+    <semantic:decisionTable hitPolicy="FIRST" id="_389f2b4f-a7bf-4393-9c49-5ed8ef5bccb0" outputLabel="Three extra days Rule">
+      <semantic:input id="_6900f71f-ea9d-4223-8751-2632585589e4">
+        <semantic:inputExpression typeRef="feel:number">
+          <semantic:text>Age</semantic:text>
+        </semantic:inputExpression>
+        <semantic:inputValues triso:constraintsType="simple">
+          <semantic:text>&gt;=14</semantic:text>
+        </semantic:inputValues>
+      </semantic:input>
+      <semantic:input id="_cc37becd-9b83-4f0a-8f70-7fea73a8f0d2">
+        <semantic:inputExpression typeRef="feel:number">
+          <semantic:text>Years of Service</semantic:text>
+        </semantic:inputExpression>
+        <semantic:inputValues triso:constraintsType="simple">
+          <semantic:text>&gt;=0</semantic:text>
+        </semantic:inputValues>
+      </semantic:input>
+      <semantic:output id="_277beda5-c6d1-4261-a13c-facd010a2cf7"/>
+      <semantic:rule id="_5f7f10dc-f40d-4b11-85f3-9fdea18cdc36">
+        <semantic:inputEntry id="_254c0c96-0736-4abc-98a9-39084558849f">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_8a2b9eb8-6ab5-4003-be43-0df56fe69482">
+          <semantic:text>&gt;=30</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="_8f885bfe-df43-41c7-a014-8c4cb747a5a2">
+          <semantic:text>3</semantic:text>
+        </semantic:outputEntry>
+      </semantic:rule>
+      <semantic:rule id="_991d02d2-264f-454d-90a7-7f0d6eaf3d9e">
+        <semantic:inputEntry id="_fe1cf9e7-01e4-4726-b0eb-8130fb107705">
+          <semantic:text>&gt;=60</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_93c9fb91-c0d2-470f-b952-6f7f7d762011">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="_3e5cd052-abff-41e3-b0e4-871f05cdc4fc">
+          <semantic:text>3</semantic:text>
+        </semantic:outputEntry>
+      </semantic:rule>
+      <semantic:rule id="_9cabd188-82a4-4591-b95c-1beb656d5f77">
+        <semantic:inputEntry id="_adf08fe3-f08c-4d34-958f-55c1a74653a9">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_4823cb58-6fdb-451b-8836-7137d4c03bcb">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="_39da53e7-989d-4a20-ada9-57e42d1856d0">
+          <semantic:text>0</semantic:text>
+        </semantic:outputEntry>
+      </semantic:rule>
+    </semantic:decisionTable>
+  </semantic:decision>
+  <semantic:decision displayName="Two extra days Rule" id="_e1e247a4-6e54-4e72-93b6-78ae8606b44d" name="Two extra days Rule">
+    <semantic:description>&lt;p&gt;If an employee has at least but less than 30 years of service, 2 extra days are given. These 2 days are also provided for employees of age 45 or more. these 2 extra days cannot be combined with the 5 extra days.&lt;/p&gt;</semantic:description>
+    <semantic:variable id="_48d7bf0b-b175-4138-b982-b392b9c825dd" name="Two extra days Rule" typeRef="feel:number"/>
+    <semantic:informationRequirement>
+      <semantic:requiredInput href="#_cf96cd90-c5c9-43f0-a286-18db091a4443"/>
+    </semantic:informationRequirement>
+    <semantic:informationRequirement>
+      <semantic:requiredInput href="#_14640e17-48e3-4902-8262-a63f7c3805e1"/>
+    </semantic:informationRequirement>
+    <semantic:decisionTable hitPolicy="FIRST" id="_ec9c7632-690f-4991-b5bd-9dd898524113" outputLabel="Two extra days Rule">
+      <semantic:input id="_91c6f394-fe1e-4a17-8b13-fdcce9391b03">
+        <semantic:inputExpression typeRef="feel:number">
+          <semantic:text>Age</semantic:text>
+        </semantic:inputExpression>
+        <semantic:inputValues triso:constraintsType="simple">
+          <semantic:text>&gt;=14</semantic:text>
+        </semantic:inputValues>
+      </semantic:input>
+      <semantic:input id="_5d0b7720-889a-4f33-9d1f-699ba6477c28">
+        <semantic:inputExpression typeRef="feel:number">
+          <semantic:text>Years of Service</semantic:text>
+        </semantic:inputExpression>
+        <semantic:inputValues triso:constraintsType="simple">
+          <semantic:text>&gt;=0</semantic:text>
+        </semantic:inputValues>
+      </semantic:input>
+      <semantic:output id="_a64a991e-4005-456b-8300-7246b581af7d"/>
+      <semantic:rule id="_7e651923-b9da-4387-bde0-bebfc7d2f4ce">
+        <semantic:inputEntry id="_87fc10c2-e218-4ce1-a61b-ba80e00a92b7">
+          <semantic:text>&gt;=45</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_1a7d0f65-65a1-4ce7-954d-eac8255cfdc8">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="_f6e5166a-82a8-4c4f-9a34-daeea8781671">
+          <semantic:text>2</semantic:text>
+        </semantic:outputEntry>
+      </semantic:rule>
+      <semantic:rule id="_0579a5ca-6afd-4218-ba4c-2cc9b68d0a60">
+        <semantic:inputEntry id="_e9d05733-a6d9-4732-8f5d-56bf0d4e5612">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_ac379760-7d1f-4679-bf01-4ec139c3b73c">
+          <semantic:text>[15..30)</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="_6e01e137-0afa-48d8-8964-320d409f98cc">
+          <semantic:text>2</semantic:text>
+        </semantic:outputEntry>
+      </semantic:rule>
+      <semantic:rule id="_e59375ea-94cb-4346-8935-7dd6a85b7077">
+        <semantic:inputEntry id="_ac7283e0-da17-45a3-b441-b4cd915a827e">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:inputEntry id="_299a054c-a055-479a-8802-f177e49f9ecc">
+          <semantic:text>-</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="_da72d9b6-f3e6-4de5-8eab-06e372aa9c22">
+          <semantic:text>0</semantic:text>
+        </semantic:outputEntry>
+      </semantic:rule>
+    </semantic:decisionTable>
+  </semantic:decision>
+  <semantic:decision displayName="Number of vacation" id="_bb71c620-18fe-4f53-8ad5-56ac74e3cfc5" name="Number of vacation">
+    <semantic:description>&lt;p&gt;Problem Statements:&lt;br /&gt;The number of vacation days depends on age and years of service.&lt;/p&gt;
+&lt;p&gt;Every employee receives at least 22 days.&lt;br /&gt;Additional days are provided according the following criteria:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Only employees younger than 18 or at least 60 years, or employees with at least 30 years of service will receive 5 extra days.&lt;/li&gt;
+&lt;li&gt;Employees with at least 30 years of service and also employees of age 60 or more, receive 3 extra days, on top of possible additional days already given.&lt;/li&gt;
+&lt;li&gt;If an employee has at least but less than 30 years of service, 2 extra days are given. These 2 days are also provided for employees of age 45 or more. these 2 extra days cannot be combined with the 5 extra days.&lt;/li&gt;
+&lt;/ol&gt;</semantic:description>
+    <semantic:variable id="_47c9a1fe-3ece-4b12-ae36-0e616869bd11" name="Number of vacation" typeRef="feel:number"/>
+    <semantic:informationRequirement>
+      <semantic:requiredDecision href="#_852f6be7-e235-4ff4-9dee-505f8cf2ae22"/>
+    </semantic:informationRequirement>
+    <semantic:informationRequirement>
+      <semantic:requiredDecision href="#_62995f21-c34f-4a9e-a25a-46fdcaf34a7e"/>
+    </semantic:informationRequirement>
+    <semantic:informationRequirement>
+      <semantic:requiredDecision href="#_e1e247a4-6e54-4e72-93b6-78ae8606b44d"/>
+    </semantic:informationRequirement>
+    <semantic:decisionTable hitPolicy="UNIQUE" id="_72fd832e-3be7-41b5-aad6-e772374a6893" outputLabel="Number of vacation">
+      <semantic:input id="_9b955fca-7740-495d-9f99-90534f67c8b9">
+        <semantic:inputExpression typeRef="feel:number">
+          <semantic:text>Five extra days Rule</semantic:text>
+        </semantic:inputExpression>
+      </semantic:input>
+      <semantic:output id="_ecc0e3f8-4f00-4029-8adc-4fea2b16a3bb"/>
+      <semantic:rule id="_119b4765-6b37-48f7-97d6-1de97aee0ac2">
+        <semantic:inputEntry id="_852cbafa-a83b-443f-8cd9-e36235f57a42">
+          <semantic:text>&gt;0</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="_6783da16-fbe2-4de9-bb76-aae181070249">
+          <semantic:text>22+Five extra days Rule+Three extra days Rule</semantic:text>
+        </semantic:outputEntry>
+      </semantic:rule>
+      <semantic:rule id="_b5be846b-9e19-42a1-9c0a-8dd1770b562f">
+        <semantic:inputEntry id="_357d6c41-0402-4be3-a2be-812ef6f95b09">
+          <semantic:text>0</semantic:text>
+        </semantic:inputEntry>
+        <semantic:outputEntry id="_8135558b-d7bf-41c5-9809-79f773256600">
+          <semantic:text>22+Two extra days Rule+Three extra days Rule</semantic:text>
+        </semantic:outputEntry>
+      </semantic:rule>
+    </semantic:decisionTable>
+  </semantic:decision>
+  <semantic:inputData displayName="Age" id="_14640e17-48e3-4902-8262-a63f7c3805e1" name="Age">
+    <semantic:variable id="_c6e149dd-9058-4eab-af35-129071bf5b92" name="Age" typeRef="feel:number"/>
+  </semantic:inputData>
+  <semantic:inputData displayName="Years of Service" id="_cf96cd90-c5c9-43f0-a286-18db091a4443" name="Years of Service">
+    <semantic:variable id="_b75e1e34-363e-441f-a920-fd1f645aba53" name="Years of Service" typeRef="feel:number"/>
+  </semantic:inputData>
+  <semantic:textAnnotation id="_fc50c036-3027-4b98-ae76-8bdfea745a64">
+    <semantic:text>Problem Statements:
+The number of vacation days depends on age and years of service.
+
+Every employee receives at least 22 days.
+Additional days are provided according the following criteria:
+
+1) Only employees younger than 18 or at least 60 years, or employees with at least 30 years of service will receive 5 extra days.
+
+2) Employees with at least 30 years of service and also employees of age 60 or more, receive 3 extra days, on top of possible additional days already given.
+
+3) If an employee has at least but less than 30 years of service, 2 extra days are given. These 2 days are also provided for employees of age 45 or more. these 2 extra days cannot be combined with the 5 extra days.
+</semantic:text>
+  </semantic:textAnnotation>
+  <semantic:association id="_507661c2-1c6a-4b1e-8d3c-d68af298a970">
+    <semantic:sourceRef href="#_bb71c620-18fe-4f53-8ad5-56ac74e3cfc5"/>
+    <semantic:targetRef href="#_fc50c036-3027-4b98-ae76-8bdfea745a64"/>
+  </semantic:association>
+</semantic:definitions>
