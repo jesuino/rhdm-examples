@@ -9,7 +9,13 @@ The model was created with [Trisotech](http://www.trisotech.com) and this is wha
 
 ### Running Locally
 
-TODO
+To run the embedded example cd into [rhdm-dmn-project](./rhdm-dmn-project) and then run:
+
+~~~
+mvn clean package exec:java -Dexec.mainClass="org.example.HelloDMNEmbedded"
+~~~
+
+You should see the following message in maven output: *Number of vacation is: 24*
 
 ### Running on Kie Server
 
