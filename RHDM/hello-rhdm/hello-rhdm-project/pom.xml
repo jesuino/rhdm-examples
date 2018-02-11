@@ -1,35 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.myteam</groupId>
-  <artifactId>hello-rhdm</artifactId>
-  <version>1.0.0</version>
-  <name>hello-rhdm</name>
-  <description>Hello World project for RHDM</description>
-  <properties>
-    <!-- This needs to be updated for RHDM 7 GA -->
-    <kie.api.version>7.5.0.Final-redhat-3</kie.api.version>
-  </properties>
-  <repositories>
-    <repository>
-      <id>guvnor-m2-repo</id>
-      <name>Guvnor M2 Repo</name>
-      <url>http://localhost:8080/decision-central/maven2/</url>
-    </repository>
-  </repositories>
-<build>
-    <plugins>
-        <plugin>
-            <groupId>org.kie.server</groupId>
-            <artifactId>kie-server-maven-plugin</artifactId>
-            <version>${kie.api.version}</version>
-            <configuration>
-                <username>kieserver</username>
-                <password>kieserver1!</password>
-            </configuration>
-        </plugin>
-        
-    </plugins>
-</build>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.myteam</groupId>
+	<artifactId>hello-rhdm</artifactId>
+	<version>1.0.0</version>
+	<name>hello-rhdm</name>
+	<description>Hello World project for RHDM</description>
+	<properties>
+		<!-- This needs to be updated for RHDM 7 GA -->
+		<kie.api.version>7.5.0.Final-redhat-3</kie.api.version>
+	</properties>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.kie.server</groupId>
+				<artifactId>kie-server-maven-plugin</artifactId>
+				<version>${kie.api.version}</version>
+				<configuration>
+					<username>kieserver</username>
+					<password>kieserver1!</password>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
 </project>
