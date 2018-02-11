@@ -5,16 +5,22 @@
 	<artifactId>rhdm-dmn-project</artifactId>
 	<version>1.0</version>
 	<properties>
-		<kie.version>7.5.0.Final-redhat-3</kie.version>
+		<kie.api.version>7.5.0.Final-redhat-3</kie.api.version>
 	</properties>
 
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.kie.server</groupId>
+				<artifactId>kie-server-maven-plugin</artifactId>
+				<version>${kie.api.version}</version>
+				<configuration>
+					<username>kieserver</username>
+					<password>kieserver1!</password>
+				</configuration>
+			</plugin>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.kie</groupId>
-			<artifactId>kie-dmn-core</artifactId>
-			<version>${kie.version}</version>
-			<scope>provided</scope>
-		</dependency>
-	</dependencies>
+		</plugins>
+	</build>
+
 </project>
