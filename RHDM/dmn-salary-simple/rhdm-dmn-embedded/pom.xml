@@ -15,10 +15,10 @@
             <artifactId>kie-dmn-core</artifactId>
             <version>${kie.version}</version>
         </dependency>
-<!--         <dependency> -->
-<!--         	<groupId>org.kie</groupId> -->
-<!--         	<artifactId>kie-ci</artifactId> -->
-<!--         	<version>${kie.version}</version> -->
-<!--         </dependency> -->
+        <dependency>
+        	<groupId>org.kie</groupId>
+        	<artifactId>kie-ci</artifactId>
+        	<version>${kie.version}</version>
+        </dependency>
     </dependencies>
 </project>

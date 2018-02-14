@@ -14,12 +14,13 @@ import org.kie.dmn.api.core.DMNRuntime;
 
 public class HelloDMNEmbedded {
 
+	private static final String PROJECT_IDENTIFIER = "org.example:rhdm-dmn-project:1.0";
 	private static final String MODEL_ID = "Vacation Day Count - Solution 1";
 	private static final String NAMESPACE = "http://www.trisotech.com/definitions/_b2ef74f8-3453-44f7-887a-86ea1dd43d80";
 
 	public static void main(String[] args) {
 		// KIE API 
-		ReleaseId releaseId = new ReleaseIdImpl("org.example", "rhdm-dmn-project", "1.0");
+		ReleaseId releaseId = new ReleaseIdImpl(PROJECT_IDENTIFIER);
 		KieContainer kc = KieServices.Factory.get().newKieContainer(releaseId);
 		KieBase kb = kc.getKieBase();
 		KieSession ks = kb.newKieSession();
