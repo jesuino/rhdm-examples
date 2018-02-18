@@ -5,7 +5,7 @@
   <version>1.0</version>
   
     <properties>
-        <kie.version>7.5.0.Final-redhat-3</kie.version>
+        <kie.version>7.5.0.Final-redhat-4</kie.version>
     </properties>
 
 
