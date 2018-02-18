@@ -9,8 +9,7 @@
 	<name>hello-rhdm</name>
 	<description>Hello World project for RHDM</description>
 	<properties>
-		<!-- This needs to be updated for RHDM 7 GA -->
-		<kie.api.version>7.5.0.Final-redhat-3</kie.api.version>
+		<kie.api.version>7.5.0.Final-redhat-4</kie.api.version>
 	</properties>
 	<build>
 		<plugins>

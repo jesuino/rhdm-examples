@@ -6,8 +6,7 @@
 	<version>1.0</version>
 
 	<properties>
-		<!-- This needs to be updated for RHDM 7 GA -->
-		<kie.api.version>7.5.0.Final-redhat-3</kie.api.version>
+		<kie.api.version>7.5.0.Final-redhat-4</kie.api.version>
 		<version.jboss.spec.javaee.7.0>1.1.0.Final-redhat-3</version.jboss.spec.javaee.7.0>
 		<version.server.bom>7.1.0.GA</version.server.bom>
 	</properties>
