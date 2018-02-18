@@ -5,7 +5,7 @@
 	<artifactId>rhdm-dmn-project</artifactId>
 	<version>1.0</version>
 	<properties>
-		<kie.api.version>7.5.0.Final-redhat-4</kie.api.version>
+		<kie.api.version>7.5.0.Final-redhat-3</kie.api.version>
 	</properties>
 
 	<build>
@@ -19,7 +19,6 @@
 					<password>kieserver1!</password>
 				</configuration>
 			</plugin>
-
 		</plugins>
 	</build>
 
