@@ -32,7 +32,7 @@ To run the embedded example cd into [rhdm-dmn-embedded](./rhdm-dmn-project) and 
 mvn clean package exec:java -Dexec.mainClass="org.example.HelloDMNEmbedded"
 ~~~
 
-You should see the following message in maven output: *Number of vacation is: 24`
+You should see the following message in maven output: *Number of vacation is: 24*
 
 ### Running on Kie Server
 
@@ -46,5 +46,5 @@ Then simply run the client. Change directory to [rhdm-dmn-remote](./rhdm-dmn-rem
 ~~~
 mvn clean package exec:java -Dexec.mainClass="org.example.HelloDMNRemote"
 ~~~
-You should see the following message in maven output: *Number of vacation is: 24
+You should see the following message in maven output: *Number of vacation is: 24*
 
