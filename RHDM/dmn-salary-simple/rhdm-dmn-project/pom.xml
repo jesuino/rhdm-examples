@@ -5,7 +5,7 @@
 	<artifactId>rhdm-dmn-project</artifactId>
 	<version>1.0</version>
 	<properties>
-		<kie.api.version>7.5.0.Final-redhat-3</kie.api.version>
+		<kie.api.version>7.6.0.Final</kie.api.version>
 	</properties>
 
 	<build>
